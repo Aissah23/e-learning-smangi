@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="png" href="LOGO SMA.png">
+	<title>Masuk/Daftar</title>
+	<link rel="stylesheet" type="text/css" href="loginStyle.css">
+	<script></script>
+
+<!-- It will redirect to the Home Page after submitting the form -->
+<script>
+$(document).ready(function(){
+    $("form").submit(function(){
+    alert("Great Job !");
+    });
+});
+</script>
+</head>
+<body style="background-image: url(f1.jpg)">
+		<div class="form-box">
+			<div class="button-box">
+				<div id="btn"></div>
+				<button type="button" class="toggle-btn" id="log" onclick="login()" style="color: #fff;">Masuk</button>
+				<button type="button" class="toggle-btn" id="reg" onclick="register()">Daftar</button>
+			</div>
+			<div class="social-icons">
+				<img src="images/icon/fb2.png">
+				<img src="images/icon/insta2.png">
+				<img src="images/icon/tt2.png">
+			</div>
+			
+			<!-- Login Form -->
+			<form id="login" class="input-group" action="index.html">
+				<div class="inp">
+					<img src="images/icon/user.png"><input type="text" id="email" class="input-field" placeholder="Username" style="width: 88%; border:none;" required="required">
+				</div>
+				<div class="inp">
+					<img src="images/icon/password.png"><input type="password" id="password" class="input-field" placeholder="Password" style="width: 88%; border: none;" required="required">
+				</div>
+				<input type="checkbox" class="check-box">Tampilkan Password
+				<button type="submit" class="submit-btn">Masuk</button>
+			</form>
+
+
+			<div class="other" id="other">
+				<div class="instead">
+					<h3>atau</h3>
+				</div>
+				<button class="connect" onclick="google()">
+					<img src="images/icon/google.png"><span>Masuk Menggunakan Google</span>
+				</button>
+			</div>
+			
+			<!-- Registration Form -->
+			<form id="register" class="input-group">
+				<input type="text" class="input-field" placeholder="Nama Siswa" required="required">
+				<input type="email" class="input-field" placeholder="NIS" required="required">
+				<input type="password" class="input-field" placeholder="Buat Username" name="psame" required="required">
+				<input type="password" class="input-field" placeholder="Buat Password" name="psame" required="required">
+				<input type="checkbox" class="check-box" id="chkAgree" onclick="goFurther()">Simpan Username dan Password
+				<button type="submit" id="btnSubmit" class="submit-btn reg-btn">Daftar</button>
+			</form>
+		</div>
+		<script type="text/javascript" src="script.js"></script>
+
+		
+</body>
+</html>
